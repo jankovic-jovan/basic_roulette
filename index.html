@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Roulette</title>
+    <link rel="shortcut icon" type="x-icon" href="roulletewheel.png">
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <div style="margin-left: auto; margin-right: auto; width: 30%;"><h2 id="wallettext"> Wallet: 1000$ </h2></div>
+    <div style="margin-left: auto; margin-right: auto; width: 20%;"><h2 id="resulttext"> ... </h2></div>
+
+    <div class="row" style="margin-inline: auto; width: auto;">
+        <div class="column">
+            <!--<br><br>-->
+            <img src="roulletewheel.png" alt="a roullete wheel" id="thewheel">
+            <!--<br><br><br>-->
+        </div>
+        <div class="column">
+            <table id="roulletetable" style="margin-left: auto; margin-right: auto;">
+                <colgroup>
+                    <col span="2" style="width: 50px; border: 3px solid #ffffff">
+                </colgroup>
+                <tr>
+                    <td class="emptytd"></td>
+                    <td class="emptytd"></td>
+                    <td class="playable" colspan="3" id="zerobutton" onclick="betButtonClick(0)">0</td>
+                </tr>
+                <tr>
+                    <td class="emptytd playable" rowspan="2" onclick="betButtonClick('1to18')">1 TO 18</td>
+                    <td class="emptytd playable" rowspan="4" onclick="betButtonClick('1st12')">1st 12</td>
+                    <td class="rednum playable" onclick="betButtonClick(1)">1</td>
+                    <td class="blacknum playable" onclick="betButtonClick(2)">2</td>
+                    <td class="rednum playable" onclick="betButtonClick(3)">3</td>
+                </tr>
+                <tr>
+                    <td class="blacknum playable" onclick="betButtonClick(4)">4</td>
+                    <td class="rednum playable" onclick="betButtonClick(5)">5</td>
+                    <td class="blacknum playable" onclick="betButtonClick(6)">6</td>
+                </tr>
+                <tr>
+                    <td class="emptytd playable" rowspan="2" onclick="betButtonClick('even')">EVEN</td>
+                    <td class="rednum playable" onclick="betButtonClick(7)">7</td>
+                    <td class="blacknum playable" onclick="betButtonClick(8)">8</td>
+                    <td class="rednum playable" onclick="betButtonClick(9)">9</td>
+                </tr>
+                <tr>
+                    <td class="blacknum playable" onclick="betButtonClick(10)">10</td>
+                    <td class="rednum playable" onclick="betButtonClick(11)">11</td>
+                    <td class="blacknum playable" onclick="betButtonClick(12)">12</td>
+                </tr>
+                <tr>
+                    <td id="redbutton" class="emptytd playable" rowspan="2" onclick="betButtonClick('red')"></td>
+                    <td class="emptytd playable" rowspan="4" onclick="betButtonClick('2nd12')">2nd 12</td>
+                    <td class="rednum playable" onclick="betButtonClick(13)">13</td>
+                    <td class="blacknum playable" onclick="betButtonClick(14)">14</td>
+                    <td class="rednum playable" onclick="betButtonClick(15)">15</td>
+                </tr>
+                <tr>
+                    <!--<td class="emptytd playable" style="background-color: red; border-color: #a52a2a;"></td>-->
+                    <td class="blacknum playable" onclick="betButtonClick(16)">16</td>
+                    <td class="rednum playable" onclick="betButtonClick(17)">17</td>
+                    <td class="blacknum playable" onclick="betButtonClick(18)">18</td>
+                </tr>
+                <tr>
+                    <td id="blackbutton" class="emptytd playable" rowspan="2" onclick="betButtonClick('black')"></td>
+                    <td class="rednum playable" onclick="betButtonClick(19)">19</td>
+                    <td class="blacknum playable" onclick="betButtonClick(20)">20</td>
+                    <td class="rednum playable" onclick="betButtonClick(21)">21</td>
+                </tr>
+                <tr>
+                    <td class="blacknum playable" onclick="betButtonClick(22)">22</td>
+                    <td class="rednum playable" onclick="betButtonClick(23)">23</td>
+                    <td class="blacknum playable" onclick="betButtonClick(24)">24</td>
+                </tr>
+                <tr>
+                    <td class="emptytd playable" rowspan="2" onclick="betButtonClick('odd')">ODD</td>
+                    <td class="emptytd playable" rowspan="4" onclick="betButtonClick('3rd12')">3rd 12</td>
+                    <td class="rednum playable" onclick="betButtonClick(25)">25</td>
+                    <td class="blacknum playable" onclick="betButtonClick(26)">26</td>
+                    <td class="rednum playable" onclick="betButtonClick(27)">27</td>
+                </tr>
+                <tr>
+                    <td class="blacknum playable" onclick="betButtonClick(28)">28</td>
+                    <td class="rednum playable" onclick="betButtonClick(29)">29</td>
+                    <td class="blacknum playable" onclick="betButtonClick(30)">30</td>
+                </tr>
+                <tr>
+                    <td class="emptytd playable" rowspan="2" onclick="betButtonClick('19to36')">19 TO 36</td>
+                    <td class="rednum playable" onclick="betButtonClick(31)">31</td>
+                    <td class="blacknum playable" onclick="betButtonClick(32)">32</td>
+                    <td class="rednum playable" onclick="betButtonClick(33)">33</td>
+                </tr>
+                    <td class="blacknum playable" onclick="betButtonClick(34)">34</td>
+                    <td class="rednum playable" onclick="betButtonClick(35)">35</td>
+                    <td class="blacknum playable" onclick="betButtonClick(36)">36</td>
+                </tr>
+                <tr>
+                    <td class="emptytd"></td>
+                    <td class="emptytd"></td>
+                    <td class="playable" onclick="betButtonClick('left12')">2:1</td>
+                    <td class="playable" onclick="betButtonClick('mid12')">2:1</td>
+                    <td class="playable" onclick="betButtonClick('right12')">2:1</td>
+                </tr>
+        
+            </table>
+        
+        </div>
+        <div class="column">
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <!-- a professional at heart, of course. In all seriousness, im sorry to whoever this reads-->
+            <table id="moneytable" style="margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td id="moneybutton1" onclick="setBetAmount(10)"> 10$ </td>
+                    <td id="moneybutton2" onclick="setBetAmount(20)"> 20$ </td>
+                    <td id="moneybutton3" onclick="setBetAmount(50)"> 50$ </td>
+                    <td id="moneybutton4" onclick="setBetAmount(100)"> 100$ </td>
+                    <td id="undobutton" onclick="undo_bet()"> UNDO </td>
+                </tr>
+            </table>
+        
+            <div id="spinDiv">
+                <button id="spinbutton" onclick="spinStartAnim()"> SPIN! </button>
+            </div>
+        
+            
+        </div>
+      </div>
+
+
+
+    <!--ovdje ce ici ista ona tabela samo veca i ad ima hover i da je klikable, i moras sve classove i idove promijenit-->
+
+    <br>
+    <h2 id="winlosetext"></h2>
+
+
+    <br><br><br>
+    <p style="position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0px;"> Made by <a href="https://jovan-jankovic.itch.io/" target="_blank" id="itchiolink">Jovan Jankovic</a></p>
+
+
+    <script src="script.js"> </script>
+</body>
+</html>

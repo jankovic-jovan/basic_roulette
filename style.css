@@ -1,0 +1,246 @@
+body {
+    background-image: url("background8.jpg");
+}
+
+h1
+{
+    color: rgb(136, 224, 150);
+    font-weight: bold;
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#itchiolink
+{
+    color: white;
+}
+#itchiolink:hover
+{
+    color: lightblue;
+}
+
+p, ul {
+    color: rgb(228, 228, 228);
+    text-align: center;
+    font-size: large;
+    list-style-position: inside;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#kakodobitivideo
+{
+    border: 4px solid rgba(255, 0, 0, 0.818);
+    border-radius: 2px;   
+}
+
+
+#ruletdemo
+{
+    width: 300px;
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+
+#roulletetable
+{
+    width: 300px;
+    height: 500px;
+    border: 3px solid white;
+    border-collapse: collapse;
+    padding: 0px;
+}
+
+td
+{
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    boredr-collapse: collapse;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rednum
+{
+    background-color: red;
+}
+
+.blacknum
+{
+    background-color: black;
+}
+
+.emptytd
+{
+    border: none;
+    width: 20px;
+}
+
+#zerodemo
+{
+    background-color: rgb(88, 146, 0);
+}
+
+#zerobutton
+{
+    background-color: rgb(88, 146, 0);
+}
+#zerobutton:hover
+{
+    background-color: rgba(92, 255, 92, 0.996);
+    color: black;
+}
+
+#redbutton
+{
+    background-color: red; 
+    border-color: #a52a2a;
+}
+#blackbutton
+{
+    background-color: black; 
+    border-color: #a52a2a;
+}
+#redbutton:hover
+{
+    background-color: darkred;
+}
+#blackbutton:hover
+{
+    background-color: darkslategrey;
+}
+
+td.playable:hover
+{
+    background-color: greenyellow;
+    color: black;
+}
+
+#thewheel
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    float: right;
+}
+
+#spinDiv
+{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+#playDiv
+{
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+
+#spinbutton
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gold;
+    color: black;
+    font-weight: bolder;
+}
+
+#playbutton
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: greenyellow;
+    color: rgb(95, 51, 51);
+    font-weight: bolder;
+}
+
+#spinbutton:hover
+{
+    background-color: darkgoldenrod;
+}
+#playbutton:hover
+{
+    background-color: rgb(110, 166, 26);
+}
+
+#wallettext
+{
+    text-align: center;
+    color: rgb(4, 232, 4);
+    font-weight: bolder;
+    font-size: 70px;
+    background-color: rgb(93, 13, 13);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#resulttext
+{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.905);
+    background-color: black;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#moneytable
+{
+    width: 500px;
+    height: 70px;
+    font-size: 30px;
+}
+
+#moneybutton1 {background-color: rgb(162, 0, 0);}
+#moneybutton2 {background-color: rgb(0, 0, 150);}
+#moneybutton3 {background-color: rgb(0, 89, 0);}
+#moneybutton4 {background-color: rgb(160, 122, 25);}
+#undobutton {background-color: black; color: white;}
+
+#moneybutton1:hover {background-color: rgb(203, 0, 0);}
+#moneybutton2:hover {background-color: rgb(0, 0, 191);}
+#moneybutton3:hover {background-color: rgb(0, 133, 0);}
+#moneybutton4:hover {background-color: rgb(214, 163, 33);}
+#undobutton:hover {background-color: rgb(255, 0, 0);}
+
+#winlosetext
+{
+    text-align: center; 
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33%;
+    padding: 1px;
+}
+  
+/* Clear floats after image containers */
+.row::after {
+    max-width: fit-content;
+    margin-inline: auto;
+    content: "";
+    clear: both;
+    display: table;
+}
